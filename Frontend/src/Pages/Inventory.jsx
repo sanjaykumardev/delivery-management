@@ -90,7 +90,7 @@ function Inventory() {
             </div>
           ))}
         </div>
-        <div className=' md:flex md:flex-col-3 p-10 space-x-4'>
+        <div className=' md:flex md:flex-col-3 mt-10 ml-0 space-x-4'>
           <select
             className='input bg-gray-200 border-none  px-8 md:w-30px  py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
           >
@@ -99,8 +99,8 @@ function Inventory() {
           </select>
           <input
             type="file"
-            className='input bg-gray-200 border-none md:w-30%  w-full md:px-8 md:py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500  p-5 ml-14  ' />
-          <button className="mt-8 MD:ml-10 text-lg  justify-between block md:p-5  md:w-20% font-bold bg-gradient-to-br from-blue-500 to-blue-400 text-white px-8 py-6 rounded-2xl  shadow-md border-none transition duration-200 ease-in-out hover:scale-103 transform">Add</button>
+            className='input bg-gray-200 border-none md:w-30% rounded-full w-20% md:px-8 md:py-6  mt-8 focus:outline-none focus:border-blue-500  p-5 ml-14  ' />
+          <button className="mt-8 MD:ml-10 text-lg  justify-between block md:p-5  md:w-[200px] font-bold bg-gradient-to-br from-blue-500 to-blue-400 text-white px-8 py-6 rounded-2xl   shadow-md border-none transition duration-200 ease-in-out hover:scale-103 transform">Add</button>
         </div>
       </div>
       <Footer />

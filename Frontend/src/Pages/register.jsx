@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import { useNavigate } from 'react-router-dom';
 import Axios from 'axios';
@@ -50,7 +51,7 @@ const Register = () => {
 
     <div>
       <Navbar />
-      <div className='w-full flex justify-center items-center   h-[80vh]'>
+      <div className='w-full flex justify-center items-center md:mt-20 md: mb-20 h-[80vh]'>
         <div className='flex flex-coljustify-center items-center space-y-2 w-[80%] md:w-[25%] '>
           <div className='container max-w-350px bg-gradient-to-b from-white to-gray-100 rounded-3xl p-8 border-5 border-white shadow-lg m-8'>
             <div className="heading text-center font-extrabold text-5xl text-blue-500">Sign Up</div>
@@ -59,14 +60,14 @@ const Register = () => {
                 type="username"
                 placeholder="username"
                 value={username}
-                className='input bg-gray-200 border-none px-8 w-full py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
+                className='input bg-gray-200 text-lg border-none px-8 w-full py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
                 onChange={(e) => setUsername(e.target.value)}
               />
               <input
                 type="Email"
                 placeholder="Email"
                 value={email}
-                className='input bg-gray-200 border-none w-full px-8 py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
+                className='input bg-gray-200 text-lg border-none w-full px-8 py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
                 onChange={(e) => setEmail(e.target.value)}
               />
 
@@ -74,7 +75,7 @@ const Register = () => {
                 type="Password"
                 placeholder="Password"
                 value={password}
-                className='input bg-gray-200 border-none w-full px-8 py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
+                className='input bg-gray-200 text-lg border-none w-full px-8 py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
                 onChange={(e) => setPassword(e.target.value)}
               />
               <select
@@ -88,7 +89,7 @@ const Register = () => {
                 <option value="delivery">Delivery Team</option>
               </select>
 
-              <button className='login-button block w-full font-bold bg-gradient-to-br from-blue-500 to-blue-400 text-white px-8 py-6 rounded-full mt-8 mx-auto shadow-md border-none transition duration-200 ease-in-out hover:scale-103 transform' type='submit'
+              <button className='login-button block w-full font-bold bg-gradient-to-br from-blue-500 to-blue-400 text-white px-8 text-2xl py-6 rounded-full mt-8 mx-auto shadow-md border-none transition duration-200 ease-in-out hover:scale-103 transform' type='submit'
               >Sign Up
               </button>
             </form>
