@@ -2,6 +2,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { useState } from 'react';
+import Axios from 'axios';
+
+
+
+
 
 const electronicProducts = [
   { id: 1, name: 'Laptop' },
@@ -28,7 +34,35 @@ const electronicProducts = [
   { id: 22, name: 'E-book Reader' }
 ];
 
+
+
+
+
 function Inventory() {
+
+  const [role, setRole] = useState("")
+  const [addfile, setAddfile] = useState("")
+  const [error, setError] = useState(false)
+
+
+  const handlefile = async (e) => {
+    e.preventDefault();
+
+    const fromData = new FormData()
+    fromData.append("file", addfile)
+
+    try {
+      const res = await Axios.post("http://localhost:3000/upload", { role, fromData });
+      setError(false);
+      console.log("file added", res)
+    }
+    catch (error) {
+      setError(true);
+      console.log(error);
+    }
+
+  }
+
   return (
     <>
       <Navbar />
@@ -90,18 +124,29 @@ function Inventory() {
             </div>
           ))}
         </div>
-        <div className=' md:flex md:flex-col-3 mt-10 ml-0 space-x-4'>
-          <select
-            className='input bg-gray-200 border-none  px-8 md:w-30px  py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
-          >
-            <option value="inventory">Refund Product </option>
-            <option value="delivery">Exchange Product</option>
-          </select>
-          <input
-            type="file"
-            className='input bg-gray-200 border-none md:w-30% rounded-full w-20% md:px-8 md:py-6  mt-8 focus:outline-none focus:border-blue-500  p-5 ml-14  ' />
-          <button className="mt-8 MD:ml-10 text-lg  justify-between block md:p-5  md:w-[200px] font-bold bg-gradient-to-br from-blue-500 to-blue-400 text-white px-8 py-6 rounded-2xl   shadow-md border-none transition duration-200 ease-in-out hover:scale-103 transform">Add</button>
-        </div>
+
+        <form >
+          <div className=' md:flex md:flex-col-3 mt-10 ml-0 space-x-4'>
+            <select
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className='input bg-gray-200 border-none  px-8 md:w-30px  py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'>
+              <option value=" ">Role </option>
+              <option value="inventory">Refund Product </option>
+              <option value="delivery">Exchange Product</option>
+            </select>
+            <input
+              onChange={(e) => setAddfile(e.target.files[0])}
+              type="file"
+              className='input bg-gray-200 border-none md:w-30% rounded-full w-20% md:px-8 md:py-6  mt-8 focus:outline-none focus:border-blue-500  p-5 ml-14  ' />
+            <button
+              onClick={handlefile}
+              className="mt-8 MD:ml-10 text-lg  justify-between block md:p-5  md:w-[200px] font-bold bg-gradient-to-br from-blue-500 to-blue-400 text-white px-8 py-6 rounded-2xl   shadow-md border-none transition duration-200 ease-in-out hover:scale-103 transform">
+              Add
+            </button>
+          </div>
+        </form>
+        {error && <h1 className='text-center mt-20 text-lg bg-red-400'>file is not upload</h1>}
       </div>
       <Footer />
     </>

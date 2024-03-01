@@ -2,12 +2,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Loader from "../components/Loader";
+// import Loader from "../Pages/Loader";
+import ClipLoader from "react-spinners/ClipLoader";
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -20,11 +21,11 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-   
+
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 6000); // 2000 milliseconds delay
+    }, 60000); // 6000 milliseconds delay
 
     try {
       const res = await Axios.post("http://localhost:3000/login", { email, password, role });
@@ -84,7 +85,13 @@ function Login() {
               </span>
 
               {loading ? (
-                <Loader/>
+                <ClipLoader
+                  color={'rgba(0, 0, 0, 1)'}
+                  loading={loading}
+                  size={150}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
               ) : (
                 <button
                   className='login-button text-2xl block w-full font-bold bg-gradient-to-br from-blue-500 to-blue-400 text-white px-8 py-6 rounded-full mt-8 mx-auto shadow-md border-none transition duration-200 ease-in-out hover:scale-103 transform'
