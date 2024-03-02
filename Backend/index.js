@@ -4,6 +4,7 @@ const app = express();
 const cors = require("cors")
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
+const multer = require("multer");
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -58,8 +59,6 @@ app.post('/register', async (req, res) => {
 //? login
 app.post('/login', async (req, res) => {
   const { email, password, role } = req.body;
-  
-
   try {
     // Query the database to retrieve user data
     connection.query(
@@ -91,6 +90,36 @@ app.post('/login', async (req, res) => {
     );
   } catch (error) {
     console.error('Error during login:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, `${Date.now()}_${file.originalname}`); 
+  }
+});
+
+const upload = multer({ storage: storage });
+
+
+app.post('/upload', upload.single('file'), async (req, res) => {
+  try {
+    const { filename, path: filePath, mimetype } = req.body;
+    const { role } = req.body;
+
+    const [result] = await connection.execute(
+      'INSERT INTO files (filename, filepath, mimetype, role) VALUES (?, ?, ?, ?)',
+      [filename, filePath, mimetype ,role]
+    );
+
+    res.status(200).json({ message: 'File uploaded successfully', fileId: result.insertId });
+  } catch (error) {
+    console.error('Error uploading file:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });

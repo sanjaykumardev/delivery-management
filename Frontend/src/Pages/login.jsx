@@ -7,8 +7,9 @@ import Axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-// import Loader from "../Pages/Loader";
-import ClipLoader from "react-spinners/ClipLoader";
+import Loader from "../Pages/Loader";
+
+
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -22,10 +23,10 @@ function Login() {
     e.preventDefault();
 
 
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 60000); // 6000 milliseconds delay
+    // setLoading(true);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 60000); // 6000 milliseconds delay
 
     try {
       const res = await Axios.post("http://localhost:3000/login", { email, password, role });
@@ -34,11 +35,18 @@ function Login() {
       console.log(role);
       console.log('Login successful');
 
-      if (role.trim() === "inventory") {
-        navigate('/inventory');
-      } else if (role.trim() === "delivery") {
-        navigate('/delivery');
-      }
+      setLoading(true);
+      navigate("/Loader");
+      setTimeout(() => {
+          setLoading(false);
+          if (role.trim() === "inventory") {
+              navigate('/inventory');
+          } else if (role.trim() === "delivery") {
+              navigate('/delivery');
+          }
+      }, 3000);
+
+
     } catch (error) {
       setError(true);
       console.error('Login failed:', error);
@@ -85,13 +93,11 @@ function Login() {
               </span>
 
               {loading ? (
-                <ClipLoader
-                  color={'rgba(0, 0, 0, 1)'}
-                  loading={loading}
-                  size={150}
-                  aria-label="Loading Spinner"
-                  data-testid="loader"
-                />
+
+                <Loader/>
+
+
+                
               ) : (
                 <button
                   className='login-button text-2xl block w-full font-bold bg-gradient-to-br from-blue-500 to-blue-400 text-white px-8 py-6 rounded-full mt-8 mx-auto shadow-md border-none transition duration-200 ease-in-out hover:scale-103 transform'
@@ -132,3 +138,13 @@ function Login() {
 }
 
 export default Login;
+
+
+
+{/* <ClipLoader
+                  color={'rgba(0, 0, 0, 1)'}
+                  loading={loading}
+                  size={150}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                /> */}

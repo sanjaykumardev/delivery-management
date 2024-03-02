@@ -1,14 +1,19 @@
 import { useState } from 'react';
+// import Loader from "../Pages/Loader";
 import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('token') !== null);
+  // const [loading, setLoading] = useState(false);
   const navigator = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem('token');
     console.log(isLoggedIn);
     setIsLoggedIn(false);
-    navigator('/');
+    setTimeout(() => {
+      navigator('/');
+    }, 3000);
+
   };
 
   return (
@@ -35,9 +40,12 @@ const Navbar = () => {
 
         <div className="flex space-x-4 ml-20">
           {isLoggedIn ? (
-            <button onClick={handleLogout} className="bg-red-500   shadow-md shadow-balck-500/50 text-white px-5 py-4  rounded">
-              Logout
-              <Link to="/register"></Link> </button>
+            <>
+              <button onClick={handleLogout} className="bg-red-500   shadow-md shadow-black-500/50 text-white px-5 py-4  rounded">
+                Logout
+                <Link to="/Loader"></Link> </button>
+
+            </>
           ) : (
             <>
               <Link to="/">
