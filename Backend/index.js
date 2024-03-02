@@ -60,7 +60,7 @@ app.post('/register', async (req, res) => {
 app.post('/login', async (req, res) => {
   const { email, password, role } = req.body;
   try {
-    // Query the database to retrieve user data
+    // ?Query the database to retrieve user data
     connection.query(
       'SELECT * FROM userinfo WHERE email = ?', [email,role],
       async (err, result) => {
@@ -69,11 +69,11 @@ app.post('/login', async (req, res) => {
           res.status(500).json({ error: 'Internal server error' });
         } else {
           if (result.length > 0) {
-            // User found, compare hashed password
+            // ?User found, compare hashed password
             const user = result[0];
             const passwordMatch = await bcrypt.compare(password, user.password);
             if (passwordMatch) {
-              // Generate JWT token
+              // ?Generate JWT token
               const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, {
                 expiresIn: '1h'
               });
@@ -95,26 +95,32 @@ app.post('/login', async (req, res) => {
 });
 
 
+
+
+// ? upload file 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/');
+   return cb(null, "./file");
   },
   filename: function (req, file, cb) {
     cb(null, `${Date.now()}_${file.originalname}`); 
   }
 });
 
-const upload = multer({ storage: storage });
-
+const upload = multer({storage });
 
 app.post('/upload', upload.single('file'), async (req, res) => {
   try {
-    const { filename, path: filePath, mimetype } = req.body;
+    const { fromData } = req.file; // Changed . to filename
     const { role } = req.body;
+    console.log(req.body);
+    console.log(req.file);
 
-    const [result] = await connection.execute(
-      'INSERT INTO files (filename, filepath, mimetype, role) VALUES (?, ?, ?, ?)',
-      [filename, filePath, mimetype ,role]
+
+
+    const [result] = await connection.query(
+      'INSERT INTO files (filename, role) VALUES (?, ?)',
+      [fromData, filePath, mimetype ,role]
     );
 
     res.status(200).json({ message: 'File uploaded successfully', fileId: result.insertId });

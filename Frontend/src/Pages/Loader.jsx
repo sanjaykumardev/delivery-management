@@ -7,7 +7,7 @@ const Loader = () => {
     <SyncLoader
       color={'rgba(0, 0, 0, 1)'}
       className="mt-[25%] ml-[46%]"
-      size={35}
+      size={30}
       aria-label="Loading Spinner"
       data-testid="loader"
     />

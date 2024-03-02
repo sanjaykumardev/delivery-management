@@ -1,6 +1,7 @@
 import { useState } from 'react';
-// import Loader from "../Pages/Loader";
 import { Link, useNavigate } from 'react-router-dom';
+import LOGO from "../assets/l3.png"
+
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('token') !== null);
@@ -10,30 +11,32 @@ const Navbar = () => {
     localStorage.removeItem('token');
     console.log(isLoggedIn);
     setIsLoggedIn(false);
+    navigator('/Loader');
     setTimeout(() => {
       navigator('/');
-    }, 3000);
+    }, 1000);
 
   };
 
   return (
-    <nav className="bg-blue-500 p-4 shadow-lg">
-      <div className="container mx-auto md:mt-2 md:mb-2 flex justify-between items-center">
-        <Link to="/home" className="text-white text-3xl font-bold">
-          Delivery Management
+    <nav className="bg-gray-100  p-4 ">
+      <div className="container ml-60 md:mt-2 md:mb-20 flex justify-between items-center">
+        <Link to="/home" className="text-black text-sm ml-0 mr-80 font-bold">
+          <img className="h-[160px] w-auto" src={LOGO} alt="Example" />
+          <p className='mt-1 text-xl text-center'>Delivery Track</p>
         </Link>
 
         <div className="hidden md:flex  text-lg space-x-20 ml-28">
-          <Link to="/" className="text-white font-bold">
+          <Link to="/" className="text-black font-bold">
             Home
           </Link>
-          <Link to="/about" className="text-white font-bold ">
+          <Link to="/about" className="text-black font-bold hover::shadow-black-500/50 ">
             About
           </Link>
-          <Link to="/services" className="text-white font-bold">
+          <Link to="/services" className="text-black font-bold">
             Services
           </Link>
-          <Link to="/contact" className="text-white  font-bold">
+          <Link to="/contact" className="text-black  font-bold">
             Contact
           </Link>
         </div>
@@ -41,7 +44,7 @@ const Navbar = () => {
         <div className="flex space-x-4 ml-20">
           {isLoggedIn ? (
             <>
-              <button onClick={handleLogout} className="bg-red-500   shadow-md shadow-black-500/50 text-white px-5 py-4  rounded">
+              <button onClick={handleLogout} className="bg-red-500 text-white text-lg font-semi-bold shadow-md shadow-black-500/50 px-5 py-4  rounded">
                 Logout
                 <Link to="/Loader"></Link> </button>
 
@@ -49,12 +52,12 @@ const Navbar = () => {
           ) : (
             <>
               <Link to="/">
-                <button className="bg-white shadow-md shadow-black-500/50 ml-10 font-bold text-black px-4 py-2 rounded">
+                <button className=" shadow-md bg-blue-500 shadow-black-500/50 ml-10 text-xl font-bold text-white px-4 py-2 rounded">
                   Sign In
                 </button>
               </Link>
               <Link to="/register">
-                <button className="bg-white shadow-md shadow-black-500/50 font-bold text-black px-4 py-2 rounded">
+                <button className="bg-blue-500 shadow-md  font-bold text-white text-xl px-4 py-2 rounded">
                   Sign Up
                 </button>
               </Link>

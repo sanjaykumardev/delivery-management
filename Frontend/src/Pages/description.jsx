@@ -27,7 +27,7 @@ const Description = () => {
       <div className="flex mt-20 md:px-[300px] items-center">
         <div className="md:grid-cols-2 justity-center items-center">
           <h2 className='text-4xl font-bold mb-3'>Product Details</h2>
-          <img src="https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg" alt="Product" className="w-40% h-[80vh] mr-8" />
+          <img src="https://img.freepik.com/premium-psd/soccer-shorts-mockup_472818-291.jpg?w=996" alt="Product" className="w-40% h-[80vh] mr-8" />
           <div className='mt-10'>
             <h2 className="text-2xl font-bold mb-2">Product Name : I Phone</h2>
             <p className="mb-1 text-1xl">Address: 1/70 avvai  Street, Chennai-37  City, India Country</p>

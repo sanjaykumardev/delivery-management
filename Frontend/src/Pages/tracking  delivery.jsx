@@ -33,7 +33,7 @@ const TrackDeliveryPage = () => {
           <h2 className="text-xl font-semibold mb-4">Delivery Information</h2>
           <div className="flex flex-col md:flex-row md:items-center mb-4">
             <div className="md:w-1/4">
-              <img src="https://images.pexels.com/photos/1294886/pexels-photo-1294886.jpeg" alt="Delivery Truck" className="w-30 " />
+              <img src="https://img.freepik.com/premium-psd/soccer-shorts-mockup_472818-291.jpg?w=996" alt="Delivery Truck" className="w-30 " />
             </div>
             <div className="md:w-3/4 ml-4">
               <p className="text-lg font-semibold">Estimated Delivery Date: March 3, 2024</p>

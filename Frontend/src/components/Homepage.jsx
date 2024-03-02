@@ -24,18 +24,11 @@ const HomePage = () => {
     }
   };
 
-  //  const viewHandel = () =>{
-  //   navigator("/delivery");
-  //  }
-  
-  //  const Clickhandle = () =>{
-  //   navigator("/inventory");
-  //  }
 
 
 
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12  ">
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">
           Welcome to Delivery Management
