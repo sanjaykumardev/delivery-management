@@ -2,6 +2,7 @@
 import React from 'react';
 import { HiOutlineTruck, HiOutlineCube } from 'react-icons/hi';
 import deliveryPng from '../assets/l3.jpg';
+import delivery from '../assets/right.png';
 import { FaPhoneAlt, FaEnvelope, FaArrowRight } from 'react-icons/fa';
 import { useState } from 'react';
 import { Link ,  useNavigate} from 'react-router-dom';
@@ -66,10 +67,13 @@ const HomePage = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="border-2 border-gray-300 p-2 rounded-md"
             />
-            <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">
+            <button type="submit" className="bg-blue-500 flex flex-col text-white px-4 py-2 rounded-md">
               Subscribe
             </button>
           </form>
+          <div className="container mx-auto  ">
+          <img src={delivery} alt="Delivery" className="mx-auto mt-12" />
+        </div>
         </div>
       </div>
     </div>
