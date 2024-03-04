@@ -90,7 +90,7 @@ const TrackDeliveryPage = () => {
               </div>
               <p className="text-lg ml-2">Delivery attempt failed</p>
             </div>
-            {/* Add more tracking statuses as needed */}
+           
           </div>
           <div className="mt-4">
             <h2 className='text-2xl mb-3'>Report</h2>

@@ -5,8 +5,78 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import 'tailwindcss/tailwind.css';
 import leftArrow from '../assets/l2.png';
+import { useState } from 'react';
+
+
+
+
+
+
+
+
+
+
+
 
 const Delivery = () => {
+
+
+`  // const [items, setItems] = useState([
+  //   {
+  //     id: 1,
+  //     name: 'Loremsdvsds',
+  //     status: 'On Board',
+  //     address: 'Address',
+  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
+  //   },
+
+  //   {
+  //     id: 1,
+  //     name: 'Loremsdvsds',
+  //     status: 'On Board',
+  //     address: 'Address',
+  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
+  //   },
+   
+  //   {
+  //     id: 1,
+  //     name: 'Loremsdvsds',
+  //     status: 'On Board',
+  //     address: 'Address',
+  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
+  //   },
+
+
+  //   {
+  //     id: 1,
+  //     name: 'Loremsdvsds',
+  //     status: 'On Board',
+  //     address: 'Address',
+  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
+  //   },
+
+
+
+  //   {
+  //     id: 1,
+  //     name: 'Loremsdvsds',
+  //     status: 'On Board',
+  //     address: 'Address',
+  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
+  //   },
+
+
+  //    {
+  //     id: 1,
+  //     name: 'Loremsdvsds',
+  //     status: 'On Board',
+  //     address: 'Address',
+  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
+  //   },
+
+
+  // ]); `
+
   return (
     <>
       <Navbar />
@@ -50,7 +120,7 @@ const Delivery = () => {
           </div>
         </div>
 
-        {/* Add as many boxes as you need */}
+     
         <div className="w-full md:w-1/2 lg:w-1/5 p-6">
           <div className="bg-white rounded-lg shadow-lg p-6">
             <img
