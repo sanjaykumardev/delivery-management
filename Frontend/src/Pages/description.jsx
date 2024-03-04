@@ -34,7 +34,7 @@ const Description = () => {
             <p className="mb-1 text-1xl">Time: 10:00 AM</p>
             <p className="mb-1 text-1xl">Date: February 28, 2024</p>
             <p className="mb-1  text-1xl">Expected Delivery: March 5, 2024</p>
-            <button className="bg-blue-500 text-white py-2 px-4 text-2xl rounded mt-2" onClick={viewtracking}>Track Delivery</button>
+            <button className="bg-blue-500 mb-10 text-white py-2 px-4 text-2xl rounded mt-2" onClick={viewtracking}>Track Delivery</button>
           </div>
         </div>
       </div>
