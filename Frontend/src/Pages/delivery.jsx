@@ -122,9 +122,9 @@ const Delivery = () => {
               src="https://imgs.search.brave.com/n5_tJpZim3I9g8-9JYO04UjdJEi9xf5jQELCMpqHPi4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9k/aWdpdGFsLWRldmlj/ZS1lbGV0cm9uaWMt/bmV0d29ya2luZy1t/ZWRpYV81Mzg3Ni0z/MTY5NS5qcGc_c2l6/ZT02MjYmZXh0PWpw/Zw"
               alt="Product"
             />
-            <div className="text-lg font-bold mb-2">Loremsdvsds</div>
-            <p className="text-green-700 mb-2">On Board</p>
-            <p className="mb-4">1/70 avvai tiruvallar chennai</p>
+            <div className="text-lg font-bold mb-2">{items.name}</div>
+            <p className="text-green-700 mb-2">{items.status}</p>
+            <p className="mb-4">{items.address}</p>
             <div className="flex justify-center">
               <Link to="/desp" className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
                 View
