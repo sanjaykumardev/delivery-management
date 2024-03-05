@@ -104,9 +104,9 @@ const Delivery = () => {
               src={items.imageUrl}
               alt="Product"
             />
-            <div className="text-lg font-bold mb-2">MockUp Wears</div>
-            <p className="text-green-700 mb-2">On Board</p>
-            <p className="mb-4">1/70 avvai tiruvallar chennai</p>
+            <div className="text-lg font-bold mb-2">{items.name}</div>
+            <p className="text-green-700 mb-2">{items.status}</p>
+            <p className="mb-4">{items.address}</p>
             <div className="flex justify-center">
               <Link to="/desp" onClick={handleview} className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
                 View
