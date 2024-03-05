@@ -132,9 +132,17 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 
 
 //? delivery
-// app.post("/delivery", async(req,res)=>{
-//   const 
-// })
+app.post("/delivery", async(req,res)=>{
+  try{
+    const { id ,name ,status,address,  imageUrl} = req.body;
+  const res =   await connection.query("INSERT INTO delivery (id ,name,status,address,  imageUrl) VALUES (?,?,?,?)",[ id ,name,status,address,  imageUrl] );
+    console.log("report succssfully",res);
+  }
+  catch(error){
+    console.log("report succssfully",error);
+  }
+
+})
 
 
 
