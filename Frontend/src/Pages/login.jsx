@@ -22,12 +22,6 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
-    // setLoading(true);
-    // setTimeout(() => {
-    //   setLoading(false);
-    // }, 60000); // 6000 milliseconds delay
-
     try {
       const res = await Axios.post("http://localhost:3000/login", { email, password, role });
       const token = res.data.token;
@@ -45,8 +39,6 @@ function Login() {
           navigate('/delivery');
         }
       }, 3000);
-
-
     } catch (error) {
       setError(true);
       console.error('Login failed:', error);
@@ -95,9 +87,6 @@ function Login() {
               {loading ? (
 
                 <Loader />
-
-
-
               ) : (
                 <button
                   className='login-button text-2xl mb-20 block w-full font-bold bg-gradient-to-br from-blue-500 to-blue-400 text-white px-8 py-6 rounded-full mt-8 mx-auto shadow-md border-none transition duration-200 ease-in-out hover:scale-103 transform'

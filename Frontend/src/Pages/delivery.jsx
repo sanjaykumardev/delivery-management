@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import 'tailwindcss/tailwind.css';
 import leftArrow from '../assets/l2.png';
 import { useState } from 'react';
-
+import axios from 'axios';
 
 
 
@@ -21,14 +21,14 @@ import { useState } from 'react';
 const Delivery = () => {
 
 
-`  // const [items, setItems] = useState([
-  //   {
-  //     id: 1,
-  //     name: 'Loremsdvsds',
-  //     status: 'On Board',
-  //     address: 'Address',
-  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
-  //   },
+  const [items, setItems] = useState([
+    {
+      id: 1,
+     name: 'Loremsdvsds',
+     status: 'On Board',
+     address: 'Address',
+     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
+    },
 
   //   {
   //     id: 1,
@@ -75,7 +75,20 @@ const Delivery = () => {
   //   },
 
 
-  // ]); `
+  ]); 
+
+
+  const handleview = async(itemId)=>{
+    const items = items.find((i) => i.id === itemId);
+    try{
+      const res = axios.post("http://localhost:3000/delivery" ,{items});
+      console.log("succssfully ",res);
+    }
+    catch(err){
+    console.log(err);
+    }
+   
+  }
 
   return (
     <>
@@ -95,7 +108,7 @@ const Delivery = () => {
             <p className="text-green-700 mb-2">On Board</p>
             <p className="mb-4">1/70 avvai tiruvallar chennai</p>
             <div className="flex justify-center">
-              <Link to="/desp" className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
+              <Link to="/desp" onClick={handleview} className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
                 View
               </Link>
             </div>

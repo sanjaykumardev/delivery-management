@@ -131,6 +131,10 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 });
 
 
+//? delivery
+// app.post("/delivery", async(req,res)=>{
+//   const 
+// })
 
 
 
