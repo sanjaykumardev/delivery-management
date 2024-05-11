@@ -49,7 +49,7 @@ function Login() {
     <div>
       <Navbar />
       <div className='w-full flex justify-center bg-white mt-10 items-center  h-[80vh]'>
-        <div className='flex flex-col justify-center items-center space-y-2 mb-20 w-[80%] md:w-[24%]'>
+        <div className='flex flex-col justify-center items-center space-y-2 mb-10 w-[80%] md:w-[24%]'>
           <div className='container max-w-350px bg-gradient-to-b from-white to-white   p-8 border-5   m-8'>
             <div className='heading text-center font-extrabold text-5xl text-blue-500'>Sign In</div>
             <form onSubmit={handleSubmit}>
