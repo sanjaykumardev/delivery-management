@@ -2,6 +2,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import leftArrow from '../assets/l2.png';
+import Navbar from '../components/Navbar';
 import {useNavigate} from 'react-router-dom';
 
 const Description = () => {
@@ -19,6 +20,7 @@ const Description = () => {
   return (
 
     <>
+     <Navbar />
       <div className="mr-8">
         <img
           onClick={viewhandle}

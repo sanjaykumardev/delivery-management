@@ -51,16 +51,16 @@ const Register = () => {
 
     <div>
       <Navbar />
-      <div className='w-full flex justify-center bg-gray-100 items-center mb-20 h-[80vh]'>
+      <div className='w-full flex justify-center bg-white items-center mb-20 h-[80vh]'>
         <div className='flex flex-coljustify-center items-center space-y-2 w-[100%] md:w-[30%] '>
-          <div className=' w-full bg-gradient-to-b from-white to-gray-100 rounded-2xl p-8 border-5 border-white shadow-lg m-8'>
+          <div className=' w-full bg-gradient-to-b  from-white to-white  p-10 border-5  m-8'>
             <div className="heading text-center font-extrabold text-5xl text-blue-500">Sign Up</div>
             <form onSubmit={RegisterSubmit} >
               <input
                 type="username"
                 placeholder="username"
                 value={username}
-                className='input bg-gray-200 text-lg border-none px-8 w-full py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
+                className='input bg-gray-200 text-lg border-none px-8  w-full py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
                 onChange={(e) => setUsername(e.target.value)}
               />
               <input

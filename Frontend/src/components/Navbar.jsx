@@ -19,24 +19,24 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-100  p-4 ">
+    <nav className=" bg-blue-500  p-4 ">
       <div className="container ml-60 md:mt-2 md:mb-20 flex justify-between items-center">
-        <Link to="/home" className="text-black text-sm ml-0 mr-80 font-bold">
+        <Link to="/home" className="text-white text-sm  mr-80 font-bold">
           <img className="h-[160px] w-auto" src={LOGO} alt="Example" />
           <p className='mt-1 text-xl text-center'>Delivery Track</p>
         </Link>
 
         <div className="hidden md:flex  text-lg space-x-20 ml-28">
-          <Link to="/" className="text-black font-bold">
+          <Link to="/" className="text-white font-bold">
             Home
           </Link>
-          <Link to="/about" className="text-black font-bold hover::shadow-black-500/50 ">
+          <Link to="/about" className="text-white font-bold hover::shadow-black-500/50 ">
             About
           </Link>
-          <Link to="/services" className="text-black font-bold">
+          <Link to="/services" className="text-white font-bold">
             Services
           </Link>
-          <Link to="/contact" className="text-black  font-bold">
+          <Link to="/contact" className="text-white  font-bold">
             Contact
           </Link>
         </div>
@@ -52,12 +52,12 @@ const Navbar = () => {
           ) : (
             <>
               <Link to="/">
-                <button className=" shadow-md bg-blue-500 shadow-black-500/50 ml-10 text-xl font-bold text-white px-4 py-2 rounded">
+                <button className=" shadow-md bg-black shadow-black-500/50 ml-10 text-xl font-bold text-white px-4 py-2 rounded">
                   Sign In
                 </button>
               </Link>
               <Link to="/register">
-                <button className="bg-blue-500 shadow-md  font-bold text-white text-xl px-4 py-2 rounded">
+                <button className="bg-black shadow-md  font-bold text-white text-xl px-4 py-2 rounded">
                   Sign Up
                 </button>
               </Link>

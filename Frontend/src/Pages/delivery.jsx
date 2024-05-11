@@ -30,50 +30,7 @@ const Delivery = () => {
      imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
     },
 
-  //   {
-  //     id: 1,
-  //     name: 'Loremsdvsds',
-  //     status: 'On Board',
-  //     address: 'Address',
-  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
-  //   },
-   
-  //   {
-  //     id: 1,
-  //     name: 'Loremsdvsds',
-  //     status: 'On Board',
-  //     address: 'Address',
-  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
-  //   },
-
-
-  //   {
-  //     id: 1,
-  //     name: 'Loremsdvsds',
-  //     status: 'On Board',
-  //     address: 'Address',
-  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
-  //   },
-
-
-
-  //   {
-  //     id: 1,
-  //     name: 'Loremsdvsds',
-  //     status: 'On Board',
-  //     address: 'Address',
-  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
-  //   },
-
-
-  //    {
-  //     id: 1,
-  //     name: 'Loremsdvsds',
-  //     status: 'On Board',
-  //     address: 'Address',
-  //     imageUrl: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
-  //   },
-
+    
 
   ]); 
 
@@ -100,13 +57,13 @@ const Delivery = () => {
         <div className="w-full  md:w-1/2 lg:w-1/5 p-6">
           <div className="bg-white rounded-lg shadow-lg p-6">
             <img
-              className="w-full h-48 object-fill box-sizing rounded-md mb-4"
-              src={items.imageUrl}
+              className="w-full h-48 object-fit box-sizing rounded-md mb-4"
+              src="https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072201.jpg?t=st=1715434967~exp=1715438567~hmac=6dab35d2ea3178ba050c58b8352544e4b2125e69a8fceda4db4829b8fc434b62&w=740"
               alt="Product"
             />
-            <div className="text-lg font-bold mb-2">{items.name}</div>
-            <p className="text-green-700 mb-2">{items.status}</p>
-            <p className="mb-4">{items.address}</p>
+            <div className="text-lg font-bold mb-2">Loremsdvsds</div>
+            <p className="text-green-700 mb-2">On Board</p>
+            <p className="mb-4">1/70 avvai tiruvallar chennai</p>
             <div className="flex justify-center">
               <Link to="/desp" onClick={handleview} className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
                 View

@@ -26,7 +26,7 @@ const Footer = () => {
           <p>Terms of Service</p>
         </div>
       </div>
-      <p className="py-2 pb-2 h-full text-center text-white bg-gray-600">All right reseved @Delivery Management 2024</p>
+      <p className="py-2 pb-2 h-full text-center text-white bg-black">All right reseved @Delivery Management 2024</p>
     </>
 
   )
