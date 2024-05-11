@@ -72,34 +72,37 @@ const HomePage = () => {
             </button>
           </form>
           <div className="container mr-10 ">
+           <h2 className='text-center text-3xl font-bold mt-10'>Delivery Details</h2>
           {/* <img src={delivery} alt="Delivery" className="mr-80 mx-auto mt-12" /> */}
           <div className=" md:w-full md:h-[80vh] text-lg flex-shrink shadow-lg  flex md:flex mt-4 bg-blue-500">
 
         <div className=" md:flex  md:justify-center md:items-center   md:space-x-35 md:mt-4  ">
           <div className="  mb-5 px-5 shadow-black" >
-            <img className=" md:h-[49vh]  shadow-black  mt-7 md:w-80 md:mt-0" src="https://images.pexels.com/photos/3730990/pexels-photo-3730990.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            <img className=" md:h-[49vh]  shadow-black object-fill mt-7 md:w-80 md:mt-0" src="https://imgs.search.brave.com/qErwrjAvBjfOgfKMsC6GQVfgzBN27_l8BgOBVX35HFo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9wb3N0/YWwtZGVsaXZlcnkt/Y291cmllci1kZWxp/dmVyaW5nLTE0OTgy/Nzc1LmpwZw" />
             <p className=" md:w-80  bg-white md:p-1">
-              Vaccines are available to protect oldeadults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
+            If your location is hard to find or if there are any landmarks nearby that can help identify your address, include them in your instructions.
             </p>
           </div>
 
           <div className=" px-5 space-x-3 shadow-black">
-            <img className=" md:h-[50vh]  ml-3 shadow-black  mt-7 md:w-80 md:mt-0" src="https://images.pexels.com/photos/2586344/pexels-photo-2586344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 " />
+            <img className=" md:h-[50vh]  ml-3 shadow-lg  mt-7 md:w-80 md:mt-0" src="https://img.freepik.com/free-photo/young-delivery-man-wor_23-2147914159.jpg?t=st=1715441853~exp=1715445453~hmac=34499c61586f5f4a45a2fea96e3b864ad91cbe8f5a49c8155e4ff29aa85a1808&w=740 " />
             <p className=" md:w-80 md:p-1 bg-white ">
-              Vaccines are available to protect older adults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
+            f there are any security gates, doors, or access codes required to enter your property, make sure to provide them to the delivery person.
+
+
             </p>
           </div>
 
           <div className=" mb-7 md:mb-7 shadow-black px-5">
-            <img className="  md:h-[49vh]   shadow-black  md:w-80 mt-7  md:mt-3" src="https://imgs.search.brave.com/UP_jfiCrj9l8wfaScvWokH3wu14-Xtp52Ad9ay0_BB8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/d2hpdGVyb29tc3R1/ZGlvLmNvbS5zZy93/b3JkcHJlc3Mvd3At/Y29udGVudC91cGxv/YWRzLzIwMjAvMDEv/QmlnLUZhbWlseS1Q/aG90b3Nob290LVNp/bmdhcG9yZV8wMDgt/OTc1eDE0NjMuanBn" />
+            <img className="  md:h-[49vh]   shadow-black  md:w-80 mt-7  md:mt-3" src="https://img.freepik.com/premium-photo/delivery-person-giving-parcel-customer-standing-outdoors_1048944-2762251.jpg?w=1380" />
             <p className=" bg-white md:w-80 md:p-1 ">
-              Vaccines are available to protect older adults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
+            If you have specific times when you prefer the delivery to be made, you can mention that as well, although this may not always be possible depending on the delivery service.
             </p>
           </div>
           <div className=" mb-7 md:mb-7 shadow-black px-5">
             <img className="  md:h-[49vh]   shadow-black  md:w-80 mt-7  md:mt-3" src="https://imgs.search.brave.com/UP_jfiCrj9l8wfaScvWokH3wu14-Xtp52Ad9ay0_BB8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/d2hpdGVyb29tc3R1/ZGlvLmNvbS5zZy93/b3JkcHJlc3Mvd3At/Y29udGVudC91cGxv/YWRzLzIwMjAvMDEv/QmlnLUZhbWlseS1Q/aG90b3Nob290LVNp/bmdhcG9yZV8wMDgt/OTc1eDE0NjMuanBn" />
             <p className=" bg-white md:w-80 md:p-1 ">
-              Vaccines are available to protect older adults from severe RSV. Monoclonal antibody products are available to protect infants and young children from severe RSV.
+            If there a nearby store or neighbor where the package can be left if you are not available, you can mention that as an alternative option.
             </p>
           </div>
         </div>
