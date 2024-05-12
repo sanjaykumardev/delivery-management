@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className=" bg-blue-500  p-4  ">
-      <div className="container ml-60 md:mt-2 md:mb-10 flex justify-between items-center">
+      <div className="container ml-60 md:mt-2 md:mb-5 flex justify-between items-center">
         <Link to="/home" className="text-white text-sm  mr-80 font-bold">
           <img className="h-[160px] w-auto" src={LOGO} alt="Example" />
           <p className='mt-1 text-3xl text-center'>Delivery Track</p>
