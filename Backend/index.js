@@ -21,6 +21,7 @@ app.use(cors({ origin: ["http://localhost:5173"] }));
 
 const connection = mysql.createConnection({
   host: "boohwpqnnp6dvxruer0r-mysql.services.clever-cloud.com",
+  port : "3306",
   user: "uvowncnbczucw4tp",
   password: "NankjArDzlV9AqaSIDvp",
   database: "boohwpqnnp6dvxruer0r",
