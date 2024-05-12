@@ -21,12 +21,9 @@ app.use(cors({ origin: ["http://localhost:5173"] }));
 
 const connection = mysql.createConnection({
   host: "boohwpqnnp6dvxruer0r-mysql.services.clever-cloud.com",
-  port : "3306",
   user: "uvowncnbczucw4tp",
   password: "NankjArDzlV9AqaSIDvp",
-  database: "boohwpqnnp6dvxruer0r",
-  ConnectionURI: "mysql://uvowncnbczucw4tp:NankjArDzlV9AqaSIDvp@boohwpqnnp6dvxruer0r-mysql.services.clever-cloud.com:3306/boohwpqnnp6dvxruer0r",
-  connectionLimit: 10,
+  database: "boohwpqnnp6dvxruer0r"
 });
 
 
@@ -161,6 +158,6 @@ connection.connect((err) => {
 
 
 //? server connection
-app.listen(port, () => {
+app.listen( 3000, () => {
   console.log(`connected to port ${port}`)
 });
