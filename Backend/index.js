@@ -25,6 +25,7 @@ const connection = mysql.createConnection({
   user: "uvowncnbczucw4tp",
   password: "NankjArDzlV9AqaSIDvp",
   database: "boohwpqnnp6dvxruer0r",
+  ConnectionURI: "mysql://uvowncnbczucw4tp:NankjArDzlV9AqaSIDvp@boohwpqnnp6dvxruer0r-mysql.services.clever-cloud.com:3306/boohwpqnnp6dvxruer0r",
   connectionLimit: 10,
 });
 
