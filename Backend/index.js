@@ -10,7 +10,7 @@ dotenv.config();
 
 
 //?server port
-const port = process.env.PORT || 4000;;
+const PORT = 8000 ;
 
 
 app.use(express.json());
@@ -158,6 +158,6 @@ connection.connect((err) => {
 
 
 //? server connection
-app.listen( port || 4000 , () => {
-  console.log(`connected to port ${port}`)
+app.listen(PORT, () => {
+  console.log("connected to port "+ PORT);
 });
