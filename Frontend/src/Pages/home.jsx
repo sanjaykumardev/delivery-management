@@ -6,7 +6,7 @@ function home() {
   return (
     <>
       <Navbar />
-      <div className='p-5 md-px[200px] bg-gray-100  '>
+      <div className=' md-px[200px] bg-gray-100  '>
         <Homepage />
        
       </div>

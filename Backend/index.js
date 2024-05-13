@@ -4,13 +4,12 @@ const app = express();
 const cors = require("cors")
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
-const multer = require("multer");
 const dotenv = require("dotenv");
 dotenv.config();
 
 
 //?server port
-const PORT = 8000 ;
+const PORT = 3000 ;
 
 
 app.use(express.json());
@@ -20,11 +19,12 @@ app.use(cors({ origin: ["http://localhost:5173"] }));
 
 
 const connection = mysql.createConnection({
-  host: "boohwpqnnp6dvxruer0r-mysql.services.clever-cloud.com",
-  user: "uvowncnbczucw4tp",
-  password: "NankjArDzlV9AqaSIDvp",
-  database: "boohwpqnnp6dvxruer0r"
+  host: "localhost",
+  user: "root",
+  password: "sanjay007",
+  database: "delivery"
 });
+
 
 
 // ? fectch data -register
@@ -95,35 +95,33 @@ app.post('/login', async (req, res) => {
 });
 
 
-
-
-// ? upload file 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-   return cb(null, "./file");
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${Date.now()}_${file.originalname}`); 
+//? product to get 
+app.get("/product" , async(req,res)=>{
+  try{
+   
+    const [rows] = await connection.query('SELECT * FROM productdetails');
+    res.status(200).json(rows);
+  }catch(error){
+    console.error('Error fetching products:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
-});
+})
 
-const upload = multer({storage });
 
-app.post('/upload', upload.single('file'), async (req, res) => {
+// ? add product
+
+app.post('/Add',  async (req, res) => {
   try {
-    const { fromData } = req.file; // Changed . to filename
-    const { role } = req.body;
-    console.log(req.body);
-    console.log(req.file);
+    
+    const {role, productname, productnumber } = req.body;
 
 
-
-    const [result] = await connection.query(
-      'INSERT INTO files (filename, role) VALUES (?, ?)',
-      [fromData, filePath, mimetype ,role]
+    const result = await connection.promise().query(
+      'INSERT INTO productdetials (role, productname, productnumber) VALUES (?, ?, ?)',
+      [role, productname, productnumber]
     );
 
-    res.status(200).json({ message: 'File uploaded successfully', fileId: result.insertId });
+    res.status(200).json({ message: 'add successfully', result });
   } catch (error) {
     console.error('Error uploading file:', error);
     res.status(500).json({ error: 'Internal server error' });
@@ -135,7 +133,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 app.post("/delivery", async(req,res)=>{
   try{
     const { id ,name ,status,address,  imageUrl} = req.body;
-  const res =   await connection.query("INSERT INTO delivery (id ,name,status,address,  imageUrl) VALUES (?,?,?,?)",[ id ,name,status,address,  imageUrl] );
+  const res =   await connection.query("INSERT INTO deliveryitems (id ,name,status,address,image) VALUES (?,?,?,?)",[ id ,name,status,address,imageUrl] );
     console.log("report succssfully",res);
   }
   catch(error){

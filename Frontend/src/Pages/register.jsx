@@ -49,9 +49,9 @@ const Register = () => {
   return (
 
 
-    <div>
+      <>
       <Navbar />
-      <div className='w-full flex justify-center bg-white items-center mb-20 h-[80vh]'>
+      <div className='w-full flex justify-center mt-40 bg-white items-center mb-20 h-[80vh]'>
         <div className='flex flex-coljustify-center items-center space-y-2 w-[100%] md:w-[30%] '>
           <div className=' w-full bg-gradient-to-b  from-white to-white  p-10 border-5  m-8'>
             <div className="heading text-center font-extrabold text-5xl text-blue-500">Sign Up</div>
@@ -122,7 +122,7 @@ const Register = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

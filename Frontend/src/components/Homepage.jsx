@@ -71,12 +71,12 @@ const HomePage = () => {
               Subscribe
             </button>
           </form>
-          <div className="container mr-10 ">
+          <div className="container mr-10  ">
            <h2 className='text-center text-3xl font-bold mt-10'>Delivery Details</h2>
           {/* <img src={delivery} alt="Delivery" className="mr-80 mx-auto mt-12" /> */}
           <div className=" md:w-full md:h-[80vh] text-lg flex-shrink shadow-lg  flex md:flex mt-4 bg-blue-500">
 
-        <div className=" md:flex  md:justify-center md:items-center   md:space-x-35 md:mt-4  ">
+        <div className=" md:flex  md:justify-center md:items-center boarder-round  md:space-x-35 md:mt-4  ">
           <div className="  mb-5 px-5 shadow-black" >
             <img className=" md:h-[49vh]  shadow-black object-fill mt-7 md:w-80 md:mt-0" src="https://imgs.search.brave.com/qErwrjAvBjfOgfKMsC6GQVfgzBN27_l8BgOBVX35HFo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9wb3N0/YWwtZGVsaXZlcnkt/Y291cmllci1kZWxp/dmVyaW5nLTE0OTgy/Nzc1LmpwZw" />
             <p className=" md:w-80  bg-white md:p-1">
