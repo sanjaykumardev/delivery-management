@@ -158,6 +158,6 @@ connection.connect((err) => {
 
 
 //? server connection
-app.listen( 3000, () => {
+app.listen( port || 4000 , () => {
   console.log(`connected to port ${port}`)
 });
