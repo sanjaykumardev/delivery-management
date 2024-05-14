@@ -14,7 +14,7 @@ const PORT = 3000 ;
 
 app.use(express.json());
 app.use(cors({
-  
+
  }));
 
 
@@ -40,7 +40,7 @@ app.post('/register', async (req, res) => {
 
     // Insert user data into the database
     connection.query(
-      'INSERT INTO userinfo (username, password, email ,role) VALUES (?, ?, ? ,?)',
+      'INSERT INTO useinfo (username, password, email ,role) VALUES (?, ?, ? ,?)',
       [username, hashedPassword, email, role],
       (err, result) => {
         if (err) {
