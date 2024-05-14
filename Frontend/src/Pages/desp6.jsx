@@ -1,14 +1,12 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable no-unused-vars */
-import React from 'react'
+
 import Footer from '../components/Footer';
 import leftArrow from '../assets/l2.png';
 import Navbar from '../components/Navbar';
 import {useNavigate} from 'react-router-dom';
 
 
-const desp7 = () => {
-
+function desp6() {
 
   const navigator = useNavigate();
 
@@ -17,8 +15,9 @@ const desp7 = () => {
   }
 
   const viewtracking = () => {
-    navigator("/track7")
+    navigator("/track6")
   }
+
   
   return (
     <>
@@ -31,7 +30,8 @@ const desp7 = () => {
       <div className="flex mt-20 md:px-[300px] items-center">
         <div className="md:grid-cols-2 justity-center items-center">
           <h2 className='text-4xl font-bold mb-3'>Product Details</h2>
-          <img src="https://img.freepik.com/premium-photo/gamepads-colored-paper-top-view-minimalism-hard-light-shade_175682-2794.jpg?w=996" alt="Product" className="w-40% h-[80vh] mr-8" />
+          <img src="https://img.freepik.com/free-photo/smartphones-balancing-with-blue-background_23-2150271748.jpg?w=740&t=st=1709371492~exp=1709372092~hmac=7deff364a5860fd274f3a33bf8efcfbfaf38be4ffb655aa15e3db2a28e36ba7c
+" alt="Product" className="w-40% h-[80vh] mr-8" />
           <div className='mt-10'>
             <h2 className="text-2xl font-bold mb-2">Product Name : I Phone</h2>
             <p className="mb-1 text-1xl">Address: 1/70 avvai  Street, Chennai-37  City, India Country</p>
@@ -47,4 +47,4 @@ const desp7 = () => {
   )
 }
 
-export default desp7
+export default desp6

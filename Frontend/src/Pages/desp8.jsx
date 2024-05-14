@@ -28,9 +28,10 @@ function desp8() {
       <div className="flex mt-20 md:px-[300px] items-center">
         <div className="md:grid-cols-2 justity-center items-center">
           <h2 className='text-4xl font-bold mb-3'>Product Details</h2>
-          <img src=".https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101" alt="Product" className="w-40% h-[80vh] mr-8" />
+          <img src="https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101
+" alt="Product" className="w-40% h-[80vh] mr-8" />
           <div className='mt-10'>
-            <h2 className="text-2xl font-bold mb-2">Product Name : I Phone</h2>
+            <h2 className="text-2xl font-bold mb-2">Product Name : SONY Nova 3 Camera</h2>
             <p className="mb-1 text-1xl">Address: 1/70 avvai  Street, Chennai-37  City, India Country</p>
             <p className="mb-1 text-1xl">Time: 10:00 AM</p>
             <p className="mb-1 text-1xl">Date: February 28, 2024</p>

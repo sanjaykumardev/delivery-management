@@ -36,7 +36,7 @@ function desp11() {
           <img src="https://img.freepik.com/free-vector/washing-machine-realistic-composition-with-housework-equipment-symbols-illustration_1284-29129.jpg?t=st=1715621707~exp=1715625307~hmac=554a1dcf63e1f4f6ef3a974168e24ce4e175d19aa0c7b60af72a306836e3bdaa&w=996
 " alt="Product" className="w-40% h-[80vh] mr-8" />
           <div className='mt-10'>
-            <h2 className="text-2xl font-bold mb-2">Product Name : I Phone</h2>
+            <h2 className="text-2xl font-bold mb-2">Product Name : 4.5 cu. ft. Stackable Front Load Washer in Titanium with SmartBoost, Optic Whites, and Pure Rinse</h2>
             <p className="mb-1 text-1xl">Address: 1/70 avvai  Street, Chennai-37  City, India Country</p>
             <p className="mb-1 text-1xl">Time: 10:00 AM</p>
             <p className="mb-1 text-1xl">Date: February 28, 2024</p>

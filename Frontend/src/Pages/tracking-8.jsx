@@ -36,11 +36,12 @@ function trackingeigth() {
           <h2 className="text-3xl font-semibold mb-4">Delivery Information</h2>
           <div className="flex flex-col md:flex-row md:items-center mb-4">
             <div className="md:w-full">
-              <img src="https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101" alt="Delivery Truck" className="w-100px " />
+              <img src="https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101
+" alt="Delivery Truck" className="w-100px " />
             </div>
             <div className="md:w-full text-start ml-20 mb-79">
               <p className="text-4xl font-semibold">Estimated Delivery Date: March 3, 2024</p>
-              <p className="text-2xl mt-6 mb-4">Product: Shorts</p>
+              <p className="text-2xl mt-6 mb-4">Product: SONY Nova 3 Camera</p>
               <p className="text-2xl mb-4">Address: Your Address</p>
               <p className="text-2xl mb-4">Date: February 28, 2024</p>
               <p className="text-2xl mb-4">Time: 10:00 AM - 2:00 PM</p>

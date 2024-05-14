@@ -1,10 +1,14 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import leftArrow from '../assets/l2.png';
 import Navbar from '../components/Navbar';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function desp14() {
+
+const desp2 = () => {
+
 
   const navigator = useNavigate();
 
@@ -13,10 +17,8 @@ function desp14() {
   }
 
   const viewtracking = () => {
-    navigator("/track14")
+    navigator("/track")
   }
-
-
   return (
     <>
          <Navbar />
@@ -28,10 +30,9 @@ function desp14() {
       <div className="flex mt-20 md:px-[300px] items-center">
         <div className="md:grid-cols-2 justity-center items-center">
           <h2 className='text-4xl font-bold mb-3'>Product Details</h2>
-          <img src=".https://img.freepik.com/premium-photo/black-new-technology-tablet-mockup-design-colorful-background_38013-1552.jpg?w=740
-" alt="Product" className="w-40% h-[80vh] mr-8" />
+          <img src="https://imgs.search.brave.com/n5_tJpZim3I9g8-9JYO04UjdJEi9xf5jQELCMpqHPi4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9k/aWdpdGFsLWRldmlj/ZS1lbGV0cm9uaWMt/bmV0d29ya2luZy1t/ZWRpYV81Mzg3Ni0z/MTY5NS5qcGc_c2l6/ZT02MjYmZXh0PWpw/Zw" alt="Product" className="w-40% h-[80vh] mr-8" />
           <div className='mt-10'>
-            <h2 className="text-2xl font-bold mb-2">Product Name : I Phone</h2>
+            <h2 className="text-2xl font-bold mb-2">Product Name : Laptop</h2>
             <p className="mb-1 text-1xl">Address: 1/70 avvai  Street, Chennai-37  City, India Country</p>
             <p className="mb-1 text-1xl">Time: 10:00 AM</p>
             <p className="mb-1 text-1xl">Date: February 28, 2024</p>
@@ -45,4 +46,4 @@ function desp14() {
   )
 }
 
-export default desp14
+export default desp2

@@ -38,11 +38,12 @@ function tackingeleven() {
           <h2 className="text-3xl font-semibold mb-4">Delivery Information</h2>
           <div className="flex flex-col md:flex-row md:items-center mb-4">
             <div className="md:w-full">
-              <img src="https://img.freepik.com/free-vector/washing-machine-realistic-composition-with-housework-equipment-symbols-illustration_1284-29129.jpg?t=st=1715621707~exp=1715625307~hmac=554a1dcf63e1f4f6ef3a974168e24ce4e175d19aa0c7b60af72a306836e3bdaa&w=996" alt="Delivery Truck" className="w-100px " />
+              <img src="https://img.freepik.com/free-vector/washing-machine-realistic-composition-with-housework-equipment-symbols-illustration_1284-29129.jpg?t=st=1715621707~exp=1715625307~hmac=554a1dcf63e1f4f6ef3a974168e24ce4e175d19aa0c7b60af72a306836e3bdaa&w=996
+" alt="Delivery Truck" className="w-100px " />
             </div>
             <div className="md:w-full text-start ml-20 mb-79">
               <p className="text-4xl font-semibold">Estimated Delivery Date: March 3, 2024</p>
-              <p className="text-2xl mt-6 mb-4">Product: Shorts</p>
+              <p className="text-2xl mt-6 mb-4">Product: 4.5 cu. ft. Stackable Front Load Washer in Titanium with SmartBoost, Optic Whites, and Pure Rinse</p>
               <p className="text-2xl mb-4">Address: Your Address</p>
               <p className="text-2xl mb-4">Date: February 28, 2024</p>
               <p className="text-2xl mb-4">Time: 10:00 AM - 2:00 PM</p>

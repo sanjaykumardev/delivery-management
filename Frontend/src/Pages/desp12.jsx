@@ -32,7 +32,7 @@ function desp12() {
           <h2 className='text-4xl font-bold mb-3'>Product Details</h2>
           <img src="https://img.freepik.com/free-vector/usb-flash-drives-illustration-3d-realistic-memory-stick-black-white-plastic-mockup_33099-588.jpg?t=st=1715621769~exp=1715625369~hmac=62fd02dacd70c6b59e58a07bf9463465d60544c0bea64a7ab5d40d61d8a1612e&w=740" alt="Product" className="w-40% h-[80vh] mr-8" />
           <div className='mt-10'>
-            <h2 className="text-2xl font-bold mb-2">Product Name : I Phone</h2>
+            <h2 className="text-2xl font-bold mb-2">Product Name : SanDisk </h2>
             <p className="mb-1 text-1xl">Address: 1/70 avvai  Street, Chennai-37  City, India Country</p>
             <p className="mb-1 text-1xl">Time: 10:00 AM</p>
             <p className="mb-1 text-1xl">Date: February 28, 2024</p>

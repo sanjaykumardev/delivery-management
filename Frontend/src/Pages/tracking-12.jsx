@@ -39,11 +39,12 @@ function trackinglastfour() {
           <h2 className="text-3xl font-semibold mb-4">Delivery Information</h2>
           <div className="flex flex-col md:flex-row md:items-center mb-4">
             <div className="md:w-full">
-              <img src="https://img.freepik.com/premium-psd/soccer-shorts-mockup_472818-291.jpg?w=996" alt="Delivery Truck" className="w-100px " />
+              <img src="https://img.freepik.com/free-vector/usb-flash-drives-illustration-3d-realistic-memory-stick-black-white-plastic-mockup_33099-588.jpg?t=st=1715621769~exp=1715625369~hmac=62fd02dacd70c6b59e58a07bf9463465d60544c0bea64a7ab5d40d61d8a1612e&w=740
+" alt="Delivery Truck" className="w-100px " />
             </div>
             <div className="md:w-full text-start ml-20 mb-79">
               <p className="text-4xl font-semibold">Estimated Delivery Date: March 3, 2024</p>
-              <p className="text-2xl mt-6 mb-4">Product: Shorts</p>
+              <p className="text-2xl mt-6 mb-4">Product:SanDisk</p>
               <p className="text-2xl mb-4">Address: Your Address</p>
               <p className="text-2xl mb-4">Date: February 28, 2024</p>
               <p className="text-2xl mb-4">Time: 10:00 AM - 2:00 PM</p>

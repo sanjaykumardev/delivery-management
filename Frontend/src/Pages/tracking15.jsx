@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
 
 
-function tarckinglast() {
+function trackinglast() {
 
 
   const [name, setName] = useState();
@@ -109,4 +109,4 @@ function tarckinglast() {
   )
 }
 
-export default tarckinglast
+export default trackinglast

@@ -40,11 +40,12 @@ function tarckinglastthree() {
           <h2 className="text-3xl font-semibold mb-4">Delivery Information</h2>
           <div className="flex flex-col md:flex-row md:items-center mb-4">
             <div className="md:w-full">
-              <img src="https://img.freepik.com/premium-psd/soccer-shorts-mockup_472818-291.jpg?w=996" alt="Delivery Truck" className="w-100px " />
+              <img src="https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437106.jpg?t=st=1715621849~exp=1715625449~hmac=2a0d91eb68b50b72db604e469a9a3f279fbebb18b843393b8a0fb30745327c4f&w=740
+" alt="Delivery Truck" className="w-100px " />
             </div>
             <div className="md:w-full text-start ml-20 mb-79">
               <p className="text-4xl font-semibold">Estimated Delivery Date: March 3, 2024</p>
-              <p className="text-2xl mt-6 mb-4">Product: Shorts</p>
+              <p className="text-2xl mt-6 mb-4">Product: Iphone 14 ProMax</p>
               <p className="text-2xl mb-4">Address: Your Address</p>
               <p className="text-2xl mb-4">Date: February 28, 2024</p>
               <p className="text-2xl mb-4">Time: 10:00 AM - 2:00 PM</p>

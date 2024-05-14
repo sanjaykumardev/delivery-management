@@ -1,14 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '../components/Footer';
 import leftArrow from '../assets/l2.png';
 import Navbar from '../components/Navbar';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
+function desp9() {
 
-function desp3() {
-  
   const navigator = useNavigate();
 
   const viewhandle = () => {
@@ -16,9 +15,8 @@ function desp3() {
   }
 
   const viewtracking = () => {
-    navigator("/track")
+    navigator("/track9")
   }
-
 
 
 
@@ -33,9 +31,10 @@ function desp3() {
       <div className="flex mt-20 md:px-[300px] items-center">
         <div className="md:grid-cols-2 justity-center items-center">
           <h2 className='text-4xl font-bold mb-3'>Product Details</h2>
-          <img src="https://img.freepik.com/premium-psd/soccer-shorts-mockup_472818-291.jpg?w=996" alt="Product" className="w-40% h-[80vh] mr-8" />
+          <img src="https://img.freepik.com/free-photo/laptop-white-background-3d-rendering-computer-generated-image_1142-48567.jpg?t=st=1709372311~exp=1709375911~hmac=74b1a440a6201b867878c7c888b440a65e68e6a81108e33a974c86d33351bcea&w=740
+" alt="Product" className="w-40% h-[80vh] mr-8" />
           <div className='mt-10'>
-            <h2 className="text-2xl font-bold mb-2">Product Name : I Phone</h2>
+            <h2 className="text-2xl font-bold mb-2">Product Name : Lenavo slime 3</h2>
             <p className="mb-1 text-1xl">Address: 1/70 avvai  Street, Chennai-37  City, India Country</p>
             <p className="mb-1 text-1xl">Time: 10:00 AM</p>
             <p className="mb-1 text-1xl">Date: February 28, 2024</p>
@@ -49,4 +48,4 @@ function desp3() {
   )
 }
 
-export default desp3
+export default desp9

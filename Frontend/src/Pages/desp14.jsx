@@ -1,11 +1,10 @@
-/* eslint-disable no-undef */
 /* eslint-disable react-hooks/rules-of-hooks */
 import Footer from '../components/Footer';
 import leftArrow from '../assets/l2.png';
 import Navbar from '../components/Navbar';
 import {useNavigate} from 'react-router-dom';
 
-function desp13() {
+function desp14() {
 
   const navigator = useNavigate();
 
@@ -14,8 +13,10 @@ function desp13() {
   }
 
   const viewtracking = () => {
-    navigator("/track13")
+    navigator("/track14")
   }
+
+
   return (
     <>
          <Navbar />
@@ -27,9 +28,10 @@ function desp13() {
       <div className="flex mt-20 md:px-[300px] items-center">
         <div className="md:grid-cols-2 justity-center items-center">
           <h2 className='text-4xl font-bold mb-3'>Product Details</h2>
-          <img src="https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437106.jpg?t=st=1715621849~exp=1715625449~hmac=2a0d91eb68b50b72db604e469a9a3f279fbebb18b843393b8a0fb30745327c4f&w=740" alt="Product" className="w-40% h-[80vh] mr-8" />
+          <img src="https://img.freepik.com/premium-photo/black-new-technology-tablet-mockup-design-colorful-background_38013-1552.jpg?w=740
+" alt="Product" className="w-40% h-[80vh] mr-8" />
           <div className='mt-10'>
-            <h2 className="text-2xl font-bold mb-2">Product Name : I Phone</h2>
+            <h2 className="text-2xl font-bold mb-2">Product Name : Ipad 4</h2>
             <p className="mb-1 text-1xl">Address: 1/70 avvai  Street, Chennai-37  City, India Country</p>
             <p className="mb-1 text-1xl">Time: 10:00 AM</p>
             <p className="mb-1 text-1xl">Date: February 28, 2024</p>
@@ -43,4 +45,4 @@ function desp13() {
   )
 }
 
-export default desp13
+export default desp14

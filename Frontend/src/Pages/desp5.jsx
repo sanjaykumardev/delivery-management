@@ -5,9 +5,8 @@ import leftArrow from '../assets/l2.png';
 import Navbar from '../components/Navbar';
 import {useNavigate} from 'react-router-dom';
 
-
-function desp6() {
-
+function desp5() {
+   
   const navigator = useNavigate();
 
   const viewhandle = () => {
@@ -15,13 +14,13 @@ function desp6() {
   }
 
   const viewtracking = () => {
-    navigator("/track6")
+    navigator("/track5")
   }
 
-  
+
   return (
     <>
-         <Navbar />
+       <Navbar />
       <div className="mr-8">
         <img
           onClick={viewhandle}
@@ -30,10 +29,9 @@ function desp6() {
       <div className="flex mt-20 md:px-[300px] items-center">
         <div className="md:grid-cols-2 justity-center items-center">
           <h2 className='text-4xl font-bold mb-3'>Product Details</h2>
-          <img src=".https://img.freepik.com/free-photo/smartphones-balancing-with-blue-background_23-2150271748.jpg?w=740&t=st=1709371492~exp=1709372092~hmac=7deff364a5860fd274f3a33bf8efcfbfaf38be4ffb655aa15e3db2a28e36ba7c
-" alt="Product" className="w-40% h-[80vh] mr-8" />
+          <img src="https://img.freepik.com/free-photo/headphones-balancing-with-blue-background_23-2150271756.jpg?w=740&t=st=1709371448~exp=1709372048~hmac=7570a58e8b628151200fe17bce7c6824d4d8c137c03e4dbdee161bc7c1fe9ade" alt="Product" className="w-40% h-[80vh] mr-8" />
           <div className='mt-10'>
-            <h2 className="text-2xl font-bold mb-2">Product Name : I Phone</h2>
+            <h2 className="text-2xl font-bold mb-2">Product Name : BoatAthead: Head phone 3</h2>
             <p className="mb-1 text-1xl">Address: 1/70 avvai  Street, Chennai-37  City, India Country</p>
             <p className="mb-1 text-1xl">Time: 10:00 AM</p>
             <p className="mb-1 text-1xl">Date: February 28, 2024</p>
@@ -43,8 +41,9 @@ function desp6() {
         </div>
       </div>
       <Footer />
+      
     </>
   )
 }
 
-export default desp6
+export default desp5
