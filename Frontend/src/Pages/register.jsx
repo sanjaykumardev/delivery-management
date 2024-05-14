@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     console.log(e);
     try {
-      const res = await Axios.post("http://localhost:3000/register", {
+      const res = await Axios.post("https://delivery-management-du2y.onrender.com/register", {
         username,
         password,
         email,
@@ -49,7 +49,7 @@ const Register = () => {
   return (
 
 
-      <>
+    <>
       <Navbar />
       <div className='w-full flex justify-center mt-40 bg-white items-center mb-20 h-[80vh]'>
         <div className='flex flex-coljustify-center items-center space-y-2 w-[100%] md:w-[30%] '>

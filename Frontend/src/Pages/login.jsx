@@ -23,7 +23,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await Axios.post("http://localhost:3000/login", { email, password, role });
+      const res = await Axios.post("https://delivery-management-du2y.onrender.com/login", { email, password, role });
       const token = res.data.token;
       localStorage.setItem('token', token);
       console.log(role);

@@ -59,7 +59,7 @@ function Inventory() {
 
   const fetchProducts = async () => {
     try {
-      const response = await Axios.get('http://localhost:3000/products');
+      const response = await Axios.get('https://delivery-management-du2y.onrender.com/products');
       setElectronicProducts(response.data);
     } catch (error) {
       console.error('Error fetching products:', error);
@@ -82,7 +82,7 @@ function Inventory() {
       
       setElectronicProducts(prevProducts => [...prevProducts, newProduct]);
 
-      const res = await Axios.post("http://localhost:3000/Add", { role, productname,productnumber});
+      const res = await Axios.post("https://delivery-management-du2y.onrender.com/Add", { role, productname,productnumber});
 
       
 

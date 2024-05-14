@@ -111,7 +111,7 @@ const Delivery = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:3000/delivery', { items });
+      const res = await axios.post('https://delivery-management-du2y.onrender.com/delivery', { items });
       console.log('success', res);
     } catch (err) {
       console.error('Error', err);
