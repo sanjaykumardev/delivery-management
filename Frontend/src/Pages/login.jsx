@@ -72,6 +72,7 @@ function Login() {
               <select
                 required
                 name="role"
+                value ={role}
                 className='input bg-gray-200 border-none px-8 w-full py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
                 onChange={(e) => setRole(e.target.value)}
               >
