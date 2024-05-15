@@ -19,11 +19,16 @@ function Login() {
   const [role, setRole] = useState("");
   const [loading, setLoading] = useState(false);
 
+
+
+const URL = "http://localhost:3000";
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await Axios.post("https://delivery-management-du2y.onrender.com/login", { email, password, role });
+      const res = await Axios.post(URL+"/login", { email, password, role });
       const token = res.data.token;
       localStorage.setItem('token', token);
       console.log(role);
