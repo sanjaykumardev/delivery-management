@@ -62,7 +62,7 @@ app.post('/login', async (req, res) => {
   try {
     // ?Query the database to retrieve user data
     connection.query(
-      'SELECT * FROM userinfo WHERE email = ?', [email],
+      'SELECT * FROM userinfo WHERE email = ?', [email,role],
       async (err, result) => {
         if (err) {
           console.error('Error querying data from MySQL:', err);
@@ -99,7 +99,7 @@ app.post('/login', async (req, res) => {
 app.get("/product" , async(req,res)=>{
   try{
    
-    const [rows] = await connection.query('SELECT * FROM productdetails');
+    const [rows] = await connection.query('SELECT  role ,productname, productnumber FROM productdetails');
     res.status(200).json(rows);
   }catch(error){
     console.error('Error fetching products:', error);
@@ -116,7 +116,7 @@ app.post('/Add',  async (req, res) => {
     const {role, productname, productnumber } = req.body;
 
 
-    const result = await connection.promise().query(
+    const result = await connection.query(
       'INSERT INTO productdetials (role, productname, productnumber) VALUES (?, ?, ?)',
       [role, productname, productnumber]
     );

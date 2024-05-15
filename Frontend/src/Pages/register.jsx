@@ -16,13 +16,15 @@ const Register = () => {
   const [error, setError] = useState(false);
   const navigator = useNavigate();
 
+  const URL = "http://localhost:3000";
+
 
   async function RegisterSubmit(e) {
 
     e.preventDefault();
     console.log(e);
     try {
-      const res = await Axios.post("http://localhost:3000/register", {
+      const res = await Axios.post( URL + "/register", {
         username,
         password,
         email,

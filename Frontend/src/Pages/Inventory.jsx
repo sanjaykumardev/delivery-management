@@ -9,7 +9,7 @@ import Axios from 'axios';
 
 
 
-
+const URL = "http://localhost:3000";
 
 
 
@@ -58,9 +58,11 @@ function Inventory() {
   }, []);
 
   const fetchProducts = async () => {
+   
     try {
-      const response = await Axios.get('https://delivery-management-du2y.onrender.com/products');
-      setElectronicProducts(response.data);
+      const res = await Axios.get( URL + "/product");
+      setElectronicProducts(res.data);
+      console.log(res)
     } catch (error) {
       console.error('Error fetching products:', error);
     }
@@ -70,7 +72,6 @@ function Inventory() {
   const handleAddProduct = async (e) => {
     e.preventDefault();
      
-
     if (!role.trim() || !productname.trim() || !productnumber.trim()) {
       setError(<div className=' p-3 mt-5 text-center text-lg bg-red-500'>Please fill out all fields. </div>);
       return;
@@ -82,7 +83,7 @@ function Inventory() {
       
       setElectronicProducts(prevProducts => [...prevProducts, newProduct]);
 
-      const res = await Axios.post("https://delivery-management-du2y.onrender.com/Add", { role, productname,productnumber});
+      const res = await Axios.post( URL + "/Add", { role, productname,productnumber});
 
       
 
@@ -190,7 +191,7 @@ function Inventory() {
               <option value=" ">Role </option>
               <option value="Refund Product">Refund Product </option>
               <option value="Exchange Product">Exchange Product</option>
-              <option value="Exchange Product">Electonic Product</option>
+              <option value="Electonic Product">Electonic Product</option>
             </select>
             <input
               onChange={(e) => setProductName(e.target.value)}
