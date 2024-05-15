@@ -62,7 +62,7 @@ app.post('/login', async (req, res) => {
   try {
     // ?Query the database to retrieve user data
     connection.query(
-      'SELECT * FROM userinfo WHERE email = ?', [email,role],
+      'SELECT * FROM userinfo WHERE email = ?', [email],
       async (err, result) => {
         if (err) {
           console.error('Error querying data from MySQL:', err);

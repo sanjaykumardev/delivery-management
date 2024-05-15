@@ -28,12 +28,11 @@ const URL = "http://localhost:3000";
     e.preventDefault();
 
     try {
-      const res = await Axios.post(URL+"/login", { email, password, role });
+      const res = await Axios.post(URL + "/login", { email, password, role });
       const token = res.data.token;
       localStorage.setItem('token', token);
       console.log(role);
       console.log('Login successful');
-
       setLoading(true);
       navigate("/Loader");
       setTimeout(() => {
@@ -77,7 +76,6 @@ const URL = "http://localhost:3000";
               <select
                 required
                 name="role"
-                value ={role}
                 className='input bg-gray-200 border-none px-8 w-full py-6 rounded-full mt-8 focus:outline-none focus:border-blue-500'
                 onChange={(e) => setRole(e.target.value)}
               >

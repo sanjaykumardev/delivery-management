@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     console.log(e);
     try {
-      const res = await Axios.post("https://delivery-management-du2y.onrender.com/register", {
+      const res = await Axios.post("http://localhost:3000/register", {
         username,
         password,
         email,
