@@ -60,7 +60,7 @@ app.post('/register', async (req, res) => {
 
 
 //? login
-app.post('/login', async (req, res) => {
+app.get('/login', async (req, res) => {
   const { email, password, role } = req.body;
   try {
     // ?Query the database to retrieve user data
