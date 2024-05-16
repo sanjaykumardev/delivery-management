@@ -9,15 +9,6 @@ import { useState } from 'react';
 import axios from 'axios';
 
 
-
-
-
-
-
-
-
-
-
 const Delivery = () => {
 
 
@@ -111,7 +102,7 @@ const Delivery = () => {
     }
 
     try {
-      const res = await axios.post('https://delivery-management-du2y.onrender.com/delivery', { items });
+      const res = await axios.post('https://delivery-management-11.onrender.com/delivery', { items });
       console.log('success', res);
     } catch (err) {
       console.error('Error', err);

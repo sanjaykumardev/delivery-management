@@ -9,8 +9,8 @@ import Axios from 'axios';
 
 
 
-const URL = "http://localhost:3000";
-
+// const URL = "http://localhost:3000";
+const URL = "https://delivery-management-11.onrender.com";
 
 
 
