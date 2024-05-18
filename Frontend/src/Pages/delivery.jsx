@@ -1,113 +1,34 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import 'tailwindcss/tailwind.css';
-import leftArrow from '../assets/l2.png';
 import { useState } from 'react';
 import axios from 'axios';
 
 
-const Delivery = () => {
+const Delivery = ({products}) => {
 
 
-  const [items, setItems] = useState([
-    {
-     id: 1,
-     name: 'Loremsdvsds',
-     status: 'On Board',
-     address: 'Address',
-     image: 'https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072201.jpg?t=st=1715434967~exp=1715438567~hmac=6dab35d2ea3178ba050c58b8352544e4b2125e69a8fceda4db4829b8fc434b62&w=740',
-    },
-    {
-      id: 2,
-      name: 'Loremsdvsds',
-      status: 'On Board',
-      address: 'Address',
-      image: 'https://imgs.search.brave.com/n5_tJpZim3I9g8-9JYO04UjdJEi9xf5jQELCMpqHPi4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9k/aWdpdGFsLWRldmlj/ZS1lbGV0cm9uaWMt/bmV0d29ya2luZy1t/ZWRpYV81Mzg3Ni0z/MTY5NS5qcGc_c2l6/ZT02MjYmZXh0PWpw/Zw',
-     },
-    {
-      id: 3,
-      name: 'Loremsdvsds',
-      status: 'On Board',
-      address: 'Address',
-      image: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
-     },
-     {
-      id: 4,
-      name: 'Loremsdvsds',
-      status: 'On Board',
-      address: 'Address',
-      image: 'https://img.freepik.com/premium-photo/generic-smartwatches-isolated-colorfull-background-3d-illustration_960782-6343.jpg?w=996',
-     },
-       {
-     id: 5,
-     name: 'Loremsdvsds',
-     status: 'On Board',
-     address: 'Address',
-     image: 'https://img.freepik.com/premium-photo/futuristic-cyborg-driving-simulation-illuminated-virtual-reality-generated-by-ai_188544-13568.jpg?w=996',
-    },
-    {
-      id: 6,
-      name: 'Loremsdvsds',
-      status: 'On Board',
-      address: 'Address',
-      image: 'https://img.freepik.com/free-photo/headphones-balancing-with-blue-background_23-2150271756.jpg?w=740&t=st=1709371448~exp=1709372048~hmac=7570a58e8b628151200fe17bce7c6824d4d8c137c03e4dbdee161bc7c1fe9ade',
-     },
-       {
-     id: 7,
-     name: 'Loremsdvsds',
-     status: 'On Board',
-     address: 'Address',
-     image: 'https://img.freepik.com/free-photo/smartphones-balancing-with-blue-background_23-2150271748.jpg?w=740&t=st=1709371492~exp=1709372092~hmac=7deff364a5860fd274f3a33bf8efcfbfaf38be4ffb655aa15e3db2a28e36ba7c',
-    },
-    {
-      id: 8,
-      name: 'Loremsdvsds',
-      status: 'On Board',
-      address: 'Address',
-      image: 'https://img.freepik.com/premium-photo/gamepads-colored-paper-top-view-minimalism-hard-light-shade_175682-2794.jpg?w=996',
-     },
-     {
-      id: 9,
-      name: 'Loremsdvsds',
-      status: 'On Board',
-      address: 'Address',
-      image: 'https://img.freepik.com/free-photo/smartphones-balancing-with-blue-background_23-2150271748.jpg?w=740&t=st=1709371492~exp=1709372092~hmac=7deff364a5860fd274f3a33bf8efcfbfaf38be4ffb655aa15e3db2a28e36ba7c',
-     },
-     {
-      id: 10,
-      name: 'Loremsdvsds',
-      status: 'On Board',
-      address: 'Address',
-      image: 'https://img.freepik.com/free-photo/photo-camera-balancing-with-yellow-background_23-2150271772.jpg?w=740&t=st=1709371644~exp=1709372244~hmac=c5ecd201ed0723f333b54af430cd65fe9a9fe2e182cd09477422a9393d51c101',
-     },
-     {
-      id: 11,
-      name: 'Loremsdvsds',
-      status: 'On Board',
-      address: 'Address',
-      image: 'https://img.freepik.com/free-photo/laptop-white-background-3d-rendering-computer-generated-image_1142-48567.jpg?t=st=1709372311~exp=1709375911~hmac=74b1a440a6201b867878c7c888b440a65e68e6a81108e33a974c86d33351bcea&w=740',
-     },
-  ]); 
+  
 
+  // const handleview = async (itemId) => {
+  //   const items = items.find((i) => i.id === itemId);
 
-  const handleview = async (itemId) => {
-    const items = items.find((i) => i.id === itemId);
+  //   if (!items) {
+  //     alert('Item not found');
+  //     return;
+  //   }
 
-    if (!items) {
-      alert('Item not found');
-      return;
-    }
-
-    try {
-      const res = await axios.post('https://delivery-management-11.onrender.com/delivery', { items });
-      console.log('success', res);
-    } catch (err) {
-      console.error('Error', err);
-    }
-  };
+  //   try {
+  //     const res = await axios.post('https://delivery-management-11.onrender.com/delivery', { items });
+  //     console.log('success', res);
+  //   } catch (err) {
+  //     console.error('Error', err);
+  //   }
+  // };
 
   return (
     <>
@@ -128,7 +49,7 @@ const Delivery = () => {
             <p className="text-green-700 mb-2">On Board</p>
             <p className="mb-4">123 Main Street, Anytown, USA</p>
             <div className="flex justify-center">
-              <Link to="/desp" onClick={handleview} className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
+              <Link to="/desp"  className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
                 View
               </Link>
             </div>
@@ -396,11 +317,18 @@ const Delivery = () => {
             </div>
           </div>
         </div>
-      </div>
-      </div>
+
+
 
       
-      
+
+
+
+        <Link to="/additem" className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
+                AddItems
+        </Link>
+      </div>
+      </div>
       <Footer />
     </>
   );

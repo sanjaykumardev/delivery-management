@@ -16,8 +16,8 @@ const Register = () => {
   const [error, setError] = useState(false);
   const navigator = useNavigate();
 
-  // const URL = "http://localhost:3000";
-  const URL = "https://delivery-management-11.onrender.com";
+  const URL = "http://localhost:3000";
+  // const URL = "https://delivery-management-11.onrender.com";
 
   async function RegisterSubmit(e) {
 

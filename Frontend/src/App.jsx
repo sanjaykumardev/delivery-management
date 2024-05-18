@@ -35,9 +35,16 @@ import Description12 from './Pages/desp12'
 import Description13 from './Pages/desp13'
 import Description14 from './Pages/desp14'
 import Description15 from './Pages/desp15'
+import Additems from './Pages/Additems'
+
+import { useState } from 'react';
 function App() {
+  
+  const [products, setProducts] = useState([]);
 
-
+  const addProduct = (product) => {
+    setProducts([...products, product]);
+  };
   return (
     <>
 
@@ -46,7 +53,7 @@ function App() {
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/inventory" element={<Inventory />} />
-        <Route exact path="/delivery" element={<Delivery />} />
+        <Route exact path="/delivery" element={<Delivery product={products} />} />
         <Route exact path="/desp" element={<Description />} />
         <Route exact path="/desp2" element={<Description2 />} />
         <Route exact path="/desp3" element={<Description3 />} />
@@ -62,6 +69,7 @@ function App() {
         <Route exact path="/desp13" element={<Description13 />} />
         <Route exact path="/desp14" element={<Description14 />} />
         <Route exact path="/desp15" element={<Description15 />} />
+        <Route exact path="/additem" element={<Additems addProduct= {addProduct}/>}/>
         <Route exact path="/track" element={<Tracking />} />
         <Route exact path="/track2" element={<Tracking2 />} />
         <Route exact path="/track3" element={<Tracking3/>} />
