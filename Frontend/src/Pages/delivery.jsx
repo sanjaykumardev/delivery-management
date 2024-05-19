@@ -324,9 +324,9 @@ const Delivery = ({products}) => {
 
 
 
-        <Link to="/additem" className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
+        {/* <Link to="/additem" className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full">
                 AddItems
-        </Link>
+        </Link> */}
       </div>
       </div>
       <Footer />
