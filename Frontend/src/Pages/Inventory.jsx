@@ -84,11 +84,11 @@ function Inventory() {
 
     try {
 
+      
+      const res = await Axios.post( URL + "/Add", { role, productname,productnumber});
       const newProduct = { id: newItem.length , name: newItem.productname, role: newItem.role , stock:  newItem.productnumber};
       
       setNewItem(prevProducts => [...prevProducts, newProduct]);
-
-      const res = await Axios.post( URL + "/Add", { role, productname,productnumber});
          
       if (role === "Electronic Product") {
         setNewItem(prevProducts => [...prevProducts, { id: prevProducts.length + 1, name: productname  , stock:  productnumber}]);
