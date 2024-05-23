@@ -57,35 +57,38 @@ app.post('/register', async (req, res) => {
 
 
 //? login
-app.post('/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   const { email, password, role } = req.body;
   try {
-    // ?Query the database to retrieve user data
+    // Query the database to retrieve user data
     connection.query(
-      'SELECT * FROM userinfo WHERE email = ?', [email,role],
+      'SELECT * FROM userinfo WHERE email = ? AND role = ?', 
+      [email, role],
       async (err, result) => {
         if (err) {
           console.error('Error querying data from MySQL:', err);
-          res.status(500).json({ error: 'Internal server error' });
-        } else {
-          if (result.length > 0) {
-            // ?User found, compare hashed password
-            const user = result[0];
-            const passwordMatch = await bcrypt.compare(password, user.password);
-            if (passwordMatch) {
-              // ?Generate JWT token
-              const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, {
-                expiresIn: '1h'
-              });
-              res.json({ message: 'Login successful', token, email: user.email });
-              console.log('Data retrieved from MySQL successfully:', user);
-            } else {
-              res.status(401).json({ error: 'Invalid username or password' });
-            }
-          } else {
-            res.status(401).json({ error: 'Invalid username or password' });
-          }
+          return res.status(500).json({ error: 'Internal server error' });
         }
+
+        if (result.length === 0) {
+          return res.status(401).json({ error: 'Invalid email or role' });
+        }
+
+        // User found, compare hashed password
+        const user = result[0];
+        const passwordMatch = await bcrypt.compare(password, user.password);
+        if (!passwordMatch) {
+          return res.status(401).json({ error: 'Invalid password' });
+        }
+
+        // Password matches, generate JWT token
+        const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET, {
+          expiresIn: '1h'
+        });
+
+        // Send token and user email in response
+        res.json({ message: 'Login successful', token, email: user.email });
+        console.log('Login successful for user:', user.email);
       }
     );
   } catch (error) {
@@ -93,6 +96,7 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 
 
 //? product to get 
