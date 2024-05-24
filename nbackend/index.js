@@ -64,7 +64,7 @@ app.post('/login', async (req, res) => {
   const { email, password, role } = req.body;
   try {
     const [rows] = await connection.execute(
-      'SELECT * FROM userinfo WHERE email = ? AND role = ?',
+      'SELECT * FROM useinfo WHERE email = ? AND role = ?',
       [email, role]
     );
 
