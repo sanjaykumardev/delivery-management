@@ -53,7 +53,14 @@ function App() {
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/inventory" element={<Inventory />} />
-        <Route exact path="/delivery" element={<Delivery product={products} />} />
+        <Route 
+        exact path="/delivery" 
+        element={<Delivery 
+        name={products.name}
+        imgSrc={products.imgSrc}
+        status={products.status}
+        address={products.address} />} 
+        />
         <Route exact path="/desp" element={<Description />} />
         <Route exact path="/desp2" element={<Description2 />} />
         <Route exact path="/desp3" element={<Description3 />} />
